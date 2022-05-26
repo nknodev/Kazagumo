@@ -53,7 +53,8 @@ module.exports = {
         'stream',
         'twitch',
         'vimeo',
-        'youtube'
+        'youtube',
+        'yandex_music'
     ],
 
     /**
@@ -61,11 +62,13 @@ module.exports = {
      * @property {"yt"} youtube
      * @property {"ytm"} youtube_music
      * @property {"sc"} soundcloud
+     * @property {"ym"} yandex_music
      * @memberOf constant
      */
     sourceIds: {
         youtube: "yt",
         youtube_music: "ytm",
+        yandex: "ym",
         soundcloud: "sc"
     }
 }
