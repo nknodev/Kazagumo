@@ -46,7 +46,11 @@ class kazagumoSearch {
                 type: playlistName ? "PLAYLIST" : "TRACK"
             }
         }
-        const result = await node.rest.resolve(!/^https?:\/\//.test(this.url) ? `${source}search:${this.url}` : this.url);
+        if (this.url.includes("music.yandex.ru") {
+            var result = await node.rest.resolve(`ymsearch:${this.url}`);
+        } else {
+            var result = await node.rest.resolve(!/^https?:\/\//.test(this.url) ? `${source}search:${this.url}` : this.url);
+        }
         this.kazagumo.emit("debug", `Requested to node. | Available: ${!!result}; Type: ${result?.type}; Tracks: ${result?.tracks?.length}`)
         if (!result) return {
             playlistName: null,
